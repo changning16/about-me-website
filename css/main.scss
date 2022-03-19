@@ -303,3 +303,14 @@ ul.skill-details {
         padding: 9em 20em 6em 20em;
     }
 }
+
+.circle {
+    animation: circleAnim 1s infinite alternate-reverse;
+}
+@keyframes circleAnim {
+
+    from {
+        transform: translate(0px, 30px);
+        z-index: 5;
+    }
+}

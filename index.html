@@ -31,40 +31,40 @@
 
     <div class="hero">
         <div class="content">
-            <h1>Beautifully Crafted Web Experiences</h1>
-            <div class="meet">
+            <h1 class="stagger1">Beautifully Crafted Web Experiences</h1>
+            <div class="meet stagger1">
                 <span>👇</span>
                 <p>Meet Changning Li</p>
             </div>
-            <svg class="scroll" width="37" height="68" viewBox="0 0 37 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="scroll stagger1" width="37" height="68" viewBox="0 0 37 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2.5" y="2.5" width="32" height="63" rx="16" fill="#5D5FEF" stroke="white" stroke-width="5"/>
-                <circle cx="19" cy="20" r="10" fill="white"/>
+                <circle class="circle" cx="19" cy="20" r="10" fill="white"/>
             </svg>
         </div>
 
         <svg class="hero-design" width="448" height="451" viewBox="0 0 448 451" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_24_100)">
+            <g class="square-anim" filter="url(#filter0_d_24_100)">
                <path d="M224 20C224 8.95431 232.954 0 244 0H314C325.046 0 334 8.95431 334 20V90C334 101.046 325.046 110 314 110H244C232.954 110 224 101.046 224 90V20Z" fill="#5D5FEF"/>
             </g>
-            <g filter="url(#filter1_d_24_100)">
+            <g class="square-anim" filter="url(#filter1_d_24_100)">
                <path d="M224 160C224 132.386 246.386 110 274 110H284C311.614 110 334 132.386 334 160V170C334 197.614 311.614 220 284 220H274C246.386 220 224 197.614 224 170V160Z" fill="#F6FA45"/>
             </g>
-            <g filter="url(#filter2_d_24_100)">
+            <g class="square-anim" filter="url(#filter2_d_24_100)">
                <path d="M334 128C334 116.954 342.954 108 354 108H424C435.046 108 444 116.954 444 128V198C444 209.046 435.046 218 424 218H354C342.954 218 334 209.046 334 198V128Z" fill="#A5A6F6"/>
             </g>
-            <g filter="url(#filter3_d_24_100)">
+            <g class="square-anim" filter="url(#filter3_d_24_100)">
                <path d="M224 243C224 231.954 232.954 223 244 223H314C325.046 223 334 231.954 334 243V313C334 324.046 325.046 333 314 333H244C232.954 333 224 324.046 224 313V243Z" fill="#5D5FEF"/>
             </g>
-            <g filter="url(#filter4_d_24_100)">
+            <g class="square-anim" filter="url(#filter4_d_24_100)">
                <path d="M4 243C4 231.954 12.9543 223 24 223H94C105.046 223 114 231.954 114 243V313C114 324.046 105.046 333 94 333H24C12.9543 333 4 324.046 4 313V243Z" fill="#7879F1"/>
             </g>
-            <g filter="url(#filter5_d_24_100)">
+            <g class="square-anim" filter="url(#filter5_d_24_100)">
                <path d="M114 353C114 341.954 122.954 333 134 333H204C215.046 333 224 341.954 224 353V423C224 434.046 215.046 443 204 443H134C122.954 443 114 434.046 114 423V353Z" fill="white"/>
             </g>
-            <g filter="url(#filter6_d_24_100)">
+            <g class="square-anim" filter="url(#filter6_d_24_100)">
                <path d="M114 130C114 118.954 122.954 110 134 110H204C215.046 110 224 118.954 224 130V200C224 211.046 215.046 220 204 220H134C122.954 220 114 211.046 114 200V130Z" fill="white"/>
             </g>
-            <g filter="url(#filter7_d_24_100)">
+            <g class="square-anim" filter="url(#filter7_d_24_100)">
                <path d="M114 270C114 242.386 136.386 220 164 220H174C201.614 220 224 242.386 224 270V280C224 307.614 201.614 330 174 330H164C136.386 330 114 307.614 114 280V270Z" fill="#F178B6"/>
             </g>
             <defs>
@@ -202,5 +202,67 @@
             <a href="#"><img src="resources/icons/Experience.png" alt="Experience"></a>
         </div>
     </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        var tl = gsap.timeline();
+
+        tl.from('.content', {
+            y: '-30%',
+            opacity:0,
+            duration: 2, 
+            ease: Power4.easeOut
+        })
+
+        tl.from('.stagger1', {
+            opacity:0,
+            y: -50,
+            stagger:.3,
+            ease:Power4.easeOut,
+            duration:2
+        }, "-=1.5")
+
+        tl.from('.hero-design', {
+            opacity:0, 
+            y:50, 
+            ease: Power4.easeOut, 
+            duration:1
+        }, "-=2")
+
+        gsap.from(".square-anim", {
+            stagger: .2,
+            scale: 0.1,
+            duration: 1,
+            ease: Back.easeOut.config(1)
+        })
+
+        gsap.from('.transition2', {
+            scrollTrigger: {
+                trigger: '.transition2',
+                start: 'top bottom'
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .8
+        });
+
+        gsap.from('.transition3', {
+            scrollTrigger: {
+                trigger: '.transition3',
+                start: 'top bottom'
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1.2,
+            stagger: .8
+        });        
+
+    </script>
+
 </body>
 </html>
