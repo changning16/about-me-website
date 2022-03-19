@@ -27,6 +27,14 @@ img {
   color: white;
 }
 
+.foot-container {
+  background: #4E50F0;
+}
+
+.foot-container a {
+  color: white;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,6 +202,18 @@ ul.skill-details {
   border-radius: 1em;
   height: auto;
   margin: 0;
+}
+
+.phrase {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+  padding-bottom: 3em;
+}
+
+.hyperlink {
+  color: #EF5DA8;
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 800px) {
