@@ -241,6 +241,16 @@ ul.skill-details {
             background: #4E50F0;
         }
     }
+
+    .foot-container{
+        display: grid;
+        background: unset;
+
+        header{
+            background: #4E50F0;
+        }
+    }
+
     header{
         padding:2em 2em 2em 4em;
     }
