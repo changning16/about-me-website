@@ -22,13 +22,6 @@ img{width: 100%;}
     }
 }
 
-.foot-container{
-    background: #4E50F0;
-    a{
-        color: white;
-    }
-}
-
 header{
     display: flex;
     justify-content: space-between;
@@ -182,6 +175,13 @@ ul.skill-details {
     margin: 0;
 }
 
+.foot-container{
+    background: #4E50F0;
+    a{
+        color: white;
+    }
+}
+
 .phrase{
     text-align: center;
     font-weight: 700;
@@ -241,6 +241,16 @@ ul.skill-details {
             background: #4E50F0;
         }
     }
+
+    .foot-container{
+        display: grid;
+        background: unset;
+
+        header{
+            background: #4E50F0;
+        }
+    }
+
     header{
         padding:2em 2em 2em 4em;
     }

@@ -27,14 +27,6 @@ img {
   color: white;
 }
 
-.foot-container {
-  background: #4E50F0;
-}
-
-.foot-container a {
-  color: white;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,6 +194,14 @@ ul.skill-details {
   border-radius: 1em;
   height: auto;
   margin: 0;
+}
+
+.foot-container {
+  background: #4E50F0;
+}
+
+.foot-container a {
+  color: white;
 }
 
 .phrase {
