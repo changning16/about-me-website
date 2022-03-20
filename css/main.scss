@@ -175,13 +175,6 @@ ul.skill-details {
     margin: 0;
 }
 
-.foot-container{
-    background: #4E50F0;
-    a{
-        color: white;
-    }
-}
-
 .phrase{
     text-align: center;
     font-weight: 700;
@@ -192,6 +185,34 @@ ul.skill-details {
 .hyperlink {
     color: #EF5DA8;
     text-decoration: underline;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+
+    .logo{
+        color: #F6FA45;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+
+        a{
+            display: block;
+            padding: 0 1em;
+        }
+    }
+    
+}
+
+.foot-container{
+    background: #4E50F0;
+    a{
+        color: white;
+    }
 }
 
 @media only screen and (min-width: 800px) {
@@ -235,15 +256,6 @@ ul.skill-details {
     .nav-container{
         display: grid;
         grid-template-columns: 66% auto;
-        background: unset;
-
-        header{
-            background: #4E50F0;
-        }
-    }
-
-    .foot-container{
-        display: grid;
         background: unset;
 
         header{
